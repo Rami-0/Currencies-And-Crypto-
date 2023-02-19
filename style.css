@@ -52,18 +52,26 @@ body{
   position: fixed;
   bottom: 0; 
   width: 100%; 
-  background-color: firebrick;
-
+  background-color: #aeb6ce;
 }
 .hide {
   display: none !important;
 }
 #tabBar img {
-  height: 50%;
+  width: 40%;
 }
 
-#tabBar > div {
+#tabBar > div  {
   display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+#tabBar > div > div{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 .nominal {
