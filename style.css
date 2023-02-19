@@ -8,6 +8,9 @@
 *::-webkit-scrollbar {
   display: none;
 }
+body{
+  width: 100%;
+}
 .topTitle {
   padding: 0 20px;
   padding-top: 12%;
@@ -45,10 +48,11 @@
   display: flex;
   justify-content: space-around;
   left: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   bottom: 0; 
-  width: 50%; 
+  width: 100%; 
+  background-color: firebrick;
 
 }
 .hide {
