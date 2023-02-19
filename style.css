@@ -43,11 +43,8 @@
 #tabBar {
   height: 10vh;
   display: flex;
-  justify-content: space-around;
-  padding: 0;
-  position: fixed;
-  width: 100%;
-
+  /* justify-content: space-around; */
+  
   overflow: hidden;
   position: fixed;
   bottom: 0; 
