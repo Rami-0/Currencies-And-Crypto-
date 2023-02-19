@@ -16,11 +16,19 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  background-color: #FFF;
+  overflow: hidden;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+
 }
 #listValute{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30.5%;
 }
 #criptoPage {
   height: 90vh;
@@ -39,6 +47,12 @@
   padding: 0;
   position: fixed;
   width: 100%;
+
+  overflow: hidden;
+  position: fixed;
+  bottom: 0; 
+  width: 100%; 
+
 }
 .hide {
   display: none !important;
@@ -89,3 +103,4 @@
   font-size: 16px;
   line-height: 21px;
 }
+/* //////////////////////////////////////// */
