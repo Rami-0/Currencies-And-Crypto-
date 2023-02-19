@@ -44,7 +44,7 @@
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  
+  left: 0;
   overflow: hidden;
   position: fixed;
   bottom: 0; 
