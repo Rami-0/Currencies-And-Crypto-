@@ -14,7 +14,7 @@ $valuteIcon.addEventListener("click", function () {
 
 let $listValute = document.querySelector("#listValute");
 
-let url = "https://www.cbr-xml-daily.ru/daily_json.js";
+const url = "https://www.cbr-xml-daily.ru/daily_json.js";
 
 fetch(url)
   .then((response) => response.json())
@@ -28,8 +28,11 @@ fetch(url)
             <div class="nominal">
             <div class="p">
             
-            <p>${valute[key].Name}</p> 
-            <p class = "">${(((valute[key].Value - valute[key].Previous)/valute[key].Value)*100).toFixed(2)}%</p> 
+            <p class = "">${valute[key].Name}</p> 
+            <p>${(
+              ((valute[key].Value - valute[key].Previous) / valute[key].Value) *
+              100
+            ).toFixed(2)}%</p> 
             </div>
             
             <div class="values">
@@ -41,3 +44,34 @@ fetch(url)
       );
     }
   });
+
+let $listCripto = document.querySelector("#listCripto")
+const urlCrypto = "https://api.coingecko.com/api/v3/indexes"
+
+fetch(urlCrypto)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    for (key in data) {
+      $listCripto.insertAdjacentHTML(
+        "beforeend",
+        `
+            <div class="nominal">
+            <div class="p">
+            
+            <p class = "">${data[key].id}</p> 
+            <p>${data[key].market}</p> 
+
+            </div>
+            
+            <div class="values">
+               <p id = "price" >$${data[key].last.toFixed(7)}</p>
+            </div>
+            </div>
+        `
+      );
+    }
+  });
+  
+
+
