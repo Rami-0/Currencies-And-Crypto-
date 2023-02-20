@@ -54,7 +54,7 @@ body{
   position: fixed;
   bottom: 0; 
   width: 100%; 
-  background-color: #aeb6ce;
+  background-color: #B9C1D9;
 }
 .hide {
   display: none !important;
@@ -91,6 +91,11 @@ body{
   font-size: 16px;
   font-weight: bold;
   width: 90%;
+}
+
+.nominal > img{
+  width: 50px;
+  margin-right: 15px;
 }
 .values {
   width: 40%;

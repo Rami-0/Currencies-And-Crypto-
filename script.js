@@ -19,7 +19,7 @@ const url = "https://www.cbr-xml-daily.ru/daily_json.js";
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     let valute = data.Valute;
     for (key in valute) {
       $listValute.insertAdjacentHTML(
@@ -46,32 +46,34 @@ fetch(url)
   });
 
 let $listCripto = document.querySelector("#listCripto")
-const urlCrypto = "https://api.coingecko.com/api/v3/indexes"
+// const urlCrypto = "https://api.coingecko.com/api/v3/indexes"
+const urlCrypto = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&ids=bitcoin%2Cethereum%2Cbinancecoin%2Ctether%2Ccardano%2Cripple%2Cpolkadot%2Cuniswap%2Clitecoin%2Cchainlink"
 
 fetch(urlCrypto)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
+    
     for (key in data) {
       $listCripto.insertAdjacentHTML(
         "beforeend",
         `
             <div class="nominal">
+            <img src="${data[key].image}" alt="">
             <div class="p">
-            
-            <p class = "">${data[key].id}</p> 
-            <p>${data[key].market}</p> 
+            <p class = "">${data[key].symbol}</p> 
+            <p>${data[key].price_change_percentage_24h}%</p> 
 
             </div>
             
             <div class="values">
-               <p id = "price" >$${data[key].last.toFixed(7)}</p>
+               <p id = "price" >$${data[key].current_price.toFixed(7)}</p>
             </div>
             </div>
         `
       );
     }
   });
-  
+
 
 
