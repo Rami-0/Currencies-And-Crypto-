@@ -5,7 +5,7 @@
   font-family: "Segoe UI", sans-serif;
   color: #17171a;
 }
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 body{
@@ -20,9 +20,9 @@ body{
   align-items: flex-end;
   justify-content: space-between;
 
-  background-color: #FFF;
+  background-color: snow;
   overflow: hidden;
-  position: fixed;
+  position: sticky;
   top: 0; 
   width: 100%; 
 
@@ -32,29 +32,29 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30.5%;
-  margin-bottom: 10vh;
 }
 
 #criptoPage {
   height: 90vh;
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #valutePage {
   height: 90vh;
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #tabBar {
   height: 10vh;
   display: flex;
   justify-content: space-around;
   left: 0;
-  position: fixed;
+  position: sticky;
   bottom: 0; 
   width: 100%; 
-  background-color: #B9C1D9;
+  background-color: snow;
+  box-shadow: 0 -2px 8px #B9C1D9;
+
 }
 .hide {
   display: none !important;
